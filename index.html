@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Conformalized Interactive Imitation Learning: Handling Expert Shift and Intermittent Feedback</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Conformalized Interactive Imitation Learning: Handling Expert Shift and Intermittent Feedback</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://mzhao98.github.io/" target="_blank">Michelle Zhao</a>,
+              </span>
+              <span class="author-block">
+                  <a href="https://hennyadmoni.com/" target="_blank">Henny Admoni</a>,
+              </span>
+              <span class="author-block">
+                  <a href="https://www.cs.cmu.edu/~reids/" target="_blank">Reid Simmons</a>,
+              </span>
+              <span class="author-block">
+                  <a href="https://www.stat.cmu.edu/~aramdas/" target="_blank">Aaditya Ramdas</a><sup>*</sup>,
+              </span>
+              <span class="author-block">
+                  <a href="https://www.cs.cmu.edu/~abajcsy/" target="_blank">Andrea Bajcsy</a><sup>*</sup>,
+              </span>
+
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">Carnegie Mellon Unversity<br>Under review at ICLR 2025</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="static/pdfs/manuscript.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/diagram_video.mov"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        After obtaining an initial learner policy, ConformalDAgger calibrates uncertainty <b><i>during</i></b> the interactive
+        deployment episode with the expert via intermittent quantile tracking. When the size of the uncertainty
+        intervals is high, the robot actively queries the user for feedback. When uncertainty is low, the robot executes
+        its predicted action and the human may independently intervene with some low probability. After deployment episode
+        ends, the data is aggregated and the learner retrained.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In interactive imitation learning (IL), uncertainty quantification offers a way for the learner (i.e. robot)
+            to contend with distribution shifts encountered during deployment by actively seeking additional feedback from
+            an expert (i.e. human) online. Prior works use mechanisms like ensemble disagreement or Monte Carlo dropout to
+            quantify when black-box IL policies are uncertain; however, these approaches can lead to overconfident estimates
+            when faced with deployment-time distribution shifts. Instead, we contend that we need uncertainty quantification
+            algorithms that can leverage the expert human feedback received during deployment time to adapt the robot's
+            uncertainty online. To tackle this, we draw upon online conformal prediction, a distribution-free method for
+            constructing prediction intervals online given a stream of ground-truth labels. Human labels, however, are
+            intermittent in the interactive IL setting. Thus, from the conformal prediction side, we introduce a novel
+            uncertainty quantification algorithm called intermittent quantile tracking (IQT) that leverages a probabilistic
+            model of intermittent labels, maintains asymptotic coverage guarantees, and empirically achieves desired
+            coverage levels. From the interactive IL side, we develop ConformalDAgger, a new approach wherein the robot
+            uses prediction intervals calibrated by IQT as a reliable measure of deployment-time uncertainty to actively
+            query for more expert feedback. We compare ConformalDAgger to prior uncertainty-aware DAgger methods in
+            scenarios where the distribution shift is (and isn't) present because of changes in the expert's policy.
+            We find that in simulated and hardware deployments on a 7DOF robotic manipulator, ConformalDAgger detects
+            high uncertainty when the expert shifts and increases the number of interventions compared to baselines,
+            allowing the robot to more quickly learn the new behavior.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/real_robot_video_draft2.mov"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        When the learned robot policy is deployed, ConformalDAgger calibrates its uncertainty
+        (represented by red prediction interval boxes) based on feedback received from the human.
+        The robot refrains from asking questions when its uncertainty is low, but when the human shifts in their
+        task policy, the robot uncertainty increases causing the robot to actively query the expert for help.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+<!-- Key Contributions -->
+<section class="hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <br />
+        <h2 class="title is-3">Key Contributions</h2>
+        <div class="content has-text-justified">
+          <ul style="list-style-type: none; padding-left: 0;">
+            <li style="background-color: #e7f1ff; margin: 10px 0; padding: 15px; border-left: 5px solid #007BFF; border-radius: 5px;">
+              <span style="font-weight: bold; color: #007BFF;">Contribution 1: Intermittent Quantile Tracking</span>
+              <p>How to do online conformal prediction without access to expert feedback at every timestep (intermittent feedback)?</p>
+            </li>
+            <li style="background-color: #e7f1ff; margin: 10px 0; padding: 15px; border-left: 5px solid #007BFF; border-radius: 5px;">
+              <span style="font-weight: bold; color: #007BFF;">Contribution 2: Conformal Interactive Imitation Learning</span>
+              <p>Using human feedback received during deployment time as a valuable uncertainty quantification signal that
+                is leveraged to update the robot’s uncertainty estimate online, and inform when the robot should <i>ask for help</i> online! </p>
+            </li>
+          </ul>
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
