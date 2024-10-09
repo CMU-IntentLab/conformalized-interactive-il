@@ -75,8 +75,10 @@
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Carnegie Mellon Unversity<br>Under review at ICLR 2025</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">Carnegie Mellon Unversity
+<!--                      <br>Under review at ICLR 2025-->
+                    </span>
+<!--                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>-->
                   </div>
 
                   <div class="column has-text-centered">
@@ -123,31 +125,28 @@
 </section>
 
 
-<!-- Key Contributions -->
-<section class="hero is-small">
+
+
+<!-- Real robot video-->
+<section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column">
-        <br />
-        <h2 class="title is-3">Key Contributions</h2>
-        <div class="content has-text-justified">
-          <ul style="list-style-type: none; padding-left: 0;">
-            <li style="background-color: #e7f1ff; margin: 10px 0; padding: 15px; border-left: 5px solid #007BFF; border-radius: 5px;">
-              <span style="font-weight: bold; color: #007BFF;">Contribution 1: Intermittent Quantile Tracking</span>
-              <p>How to do online conformal prediction without access to expert feedback at every timestep (intermittent feedback)?</p>
-            </li>
-            <li style="background-color: #e7f1ff; margin: 10px 0; padding: 15px; border-left: 5px solid #007BFF; border-radius: 5px;">
-              <span style="font-weight: bold; color: #007BFF;">Contribution 2: Conformal Interactive Imitation Learning</span>
-              <p>Using human feedback received during deployment time as a valuable uncertainty quantification signal that
-                is leveraged to update the robot’s uncertainty estimate online, and inform when the robot should <i>ask for help</i> online! </p>
-            </li>
-          </ul>
-          <br />
-        </div>
-      </div>
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/real_robot_v3.mov"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        When the learned robot policy is deployed, ConformalDAgger calibrates its uncertainty
+        (represented by red prediction interval boxes) based on feedback received from the human.
+        The robot refrains from asking questions when its uncertainty is low, but when the human shifts in their
+        task policy, the robot uncertainty increases causing the robot to actively query the expert for help.
+      </h2>
     </div>
   </div>
 </section>
+<!-- End teaser video -->
+
 
 
 
@@ -185,8 +184,65 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Key Contributions -->
+<section class="hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <br />
+        <h2 class="title is-3">Key Contributions</h2>
+        <div class="content has-text-justified">
+          <ul style="list-style-type: none; padding-left: 0;">
+            <li style="background-color: #e7f1ff; margin: 10px 0; padding: 15px; border-left: 5px solid #007BFF; border-radius: 5px;">
+              <span style="font-weight: bold; color: #007BFF;">Contribution 1: Intermittent Quantile Tracking</span>
+              <p>How to do online conformal prediction without access to expert feedback at every timestep (intermittent feedback)?</p>
+            </li>
+            <li style="background-color: #e7f1ff; margin: 10px 0; padding: 15px; border-left: 5px solid #007BFF; border-radius: 5px;">
+              <span style="font-weight: bold; color: #007BFF;">Contribution 2: Conformal Interactive Imitation Learning</span>
+              <p>Using human feedback received during deployment time as a valuable uncertainty quantification signal that
+                is leveraged to update the robot’s uncertainty estimate online, and inform when the robot should <i>ask for help</i> online! </p>
+            </li>
+          </ul>
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- Teaser video-->
+
+
+
+
+
+
+
+
+
+<!-- Recipe for IQT video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <br />
+      <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">Intermittent Online Conformal Prediction</h2></div>
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/recipe_iqt2.mov"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        In this work, we relax the assumption that labels must be observed at each time point in the streaming data and
+        extend the online conformal paradigm to ensure coverage in settings where ground truth labels are intermittently
+        observed. We present our approach in the context of quantile tracking.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+
+<!-- ConformalDAgger pipeline video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -209,34 +265,6 @@
   </div>
 </section>
 <!-- End teaser video -->
-
-<!-- Teaser video-->
-<section class="hero is-small is-light">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/real_robot_video_draft2.mov"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        When the learned robot policy is deployed, ConformalDAgger calibrates its uncertainty
-        (represented by red prediction interval boxes) based on feedback received from the human.
-        The robot refrains from asking questions when its uncertainty is low, but when the human shifts in their
-        task policy, the robot uncertainty increases causing the robot to actively query the expert for help.
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-
-
-
-
-
-
-
 
   <footer class="footer">
   <div class="container">
